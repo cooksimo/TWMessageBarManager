@@ -635,10 +635,11 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
 #pragma mark - Getters
 
 //required for iPhone X
--(CGFloat)topSafeArea{
+- (CGFloat)topSafeArea {
     if (@available(iOS 11.0, *)) {
         return [[[UIApplication sharedApplication] delegate] window].safeAreaInsets.top;
-    }else{
+    }
+    else {
         return 0.0f;
     }
 }
