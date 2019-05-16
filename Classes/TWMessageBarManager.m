@@ -266,6 +266,9 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
     {
         [self showNextMessage];
     }
+    
+    // Focus on this view when in voiceover
+    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, messageView);
 }
 
 - (void)hideAllAnimated:(BOOL)animated
