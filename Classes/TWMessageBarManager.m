@@ -657,7 +657,7 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
     CGFloat outerVerticalPadding = [self outerVerticalPadding];
     CGSize iconSize = [self iconSize];
     
-    CGFloat textOffset = [self titleFont].lineHeight - [self titleFont].ascender;
+    CGFloat textOffset = -([self titleFont].lineHeight - [self titleFont].ascender);
     
     CGFloat labelBasedHeight = (outerVerticalPadding * 2) + titleLabelSize.height + descriptionLabelSize.height + [self statusBarOffset] - (2*textOffset);
     CGFloat iconBasedHeight = (outerVerticalPadding * 2) + iconSize.height + [self statusBarOffset];
